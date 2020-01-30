@@ -12,15 +12,25 @@ import io.appium.java_client.remote.MobileCapabilityType;
 public class Base {
 
 	public static AndroidDriver<AndroidElement> driver ;
+	
 	@BeforeSuite
 	public void startEmelator() throws MalformedURLException 
 	{
 		File fis = new File(System.getProperty("user.dir")+"\\APK\\");
+		
 		//File fs = new File(fis, "CashSwapTestV0.27..apk");
 		File fs = new File(fis, "ApiDemos-debug.apk");
-		DesiredCapabilities cap= new DesiredCapabilities();
-		cap.setCapability(MobileCapabilityType.DEVICE_NAME, "samDV" );
 		
+		DesiredCapabilities cap= new DesiredCapabilities();
+		
+		
+		// emulator device
+		//cap.setCapability(MobileCapabilityType.DEVICE_NAME, "samDV" );
+	
+		// real device
+		cap.setCapability(MobileCapabilityType.DEVICE_NAME, "5203d634f4039303" );
+		
+	
 		//new step 
 		cap.setCapability(MobileCapabilityType.AUTOMATION_NAME,"uiautomator2");
 		cap.setCapability(MobileCapabilityType.APP, fs.getAbsolutePath());

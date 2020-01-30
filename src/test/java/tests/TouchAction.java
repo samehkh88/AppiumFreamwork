@@ -1,5 +1,6 @@
 package tests;
 
+import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebElement;
@@ -10,8 +11,9 @@ public class TouchAction extends Base {
 
 
 	@Test
-	public void clickon()
+	public void clickon() throws MalformedURLException
 	{
+		
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		driver.findElementByAndroidUIAutomator("text(\"Views\")").click();
 		WebElement links = driver.findElementByAndroidUIAutomator("text(\"Expandable Lists\")");

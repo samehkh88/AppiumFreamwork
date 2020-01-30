@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.ScrollInAction">
+      <class name="tests.GoogleTestCase">
         <methods>
-          <include name="clickon"/>
           <include name="startEmelator"/>
+          <include name="UserCanSearchIngoogleSuccessfully"/>
         </methods>
-      </class> <!-- tests.ScrollInAction -->
+      </class> <!-- tests.GoogleTestCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
